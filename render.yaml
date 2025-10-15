@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: deepface-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free  # puedes usar 'starter' o 'standard' si necesitas más CPU/RAM
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 5000
